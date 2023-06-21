@@ -1,0 +1,206 @@
+@import "./reset";
+@import "./mixins";
+
+:root {
+  --pi: 3.1416;
+
+  /**
+  * @tokens Spacing
+  * @presenter Spacing
+  */
+  --padding-0: 0; /*  @presenter Spacing */
+  --padding-8: 8px; /*  @presenter Spacing */
+  --padding-16: 16px; /*  @presenter Spacing */
+  --padding-24: 24px; /*  @presenter Spacing */
+  --padding-32: 32px; /*  @presenter Spacing */
+  --padding-48: 48px; /*  @presenter Spacing */
+  --padding-64: 64px; /*  @presenter Spacing */
+  --padding-96: 96px; /*  @presenter Spacing */
+  --padding-128: 128px; /*  @presenter Spacing */
+
+  /**
+  * @tokens-end
+  */
+
+  /**
+  * @tokens Grid
+  * @presenter Spacing
+  */
+
+  --grid-column-18: 18;
+  --grid-column-9: 9;
+  --grid-gap: var(--padding-16);
+
+  /**
+  * @tokens-end
+  */
+
+  /**
+  * @tokens Colors
+  * @presenter Color
+  */
+  --black: #0e141d; /* Text, buttons @presenter Color */
+  --white: #fcfcfc; /* Text on photo, buttons, background @presenter Color */
+  --blue: #3272d9; /* Text links, buttons @presenter Color */
+  --orange: #ffba7b; /* Graphics @presenter Color */
+  --red: #e13c3c; /* Input errors @presenter Color */
+  --main-gray: #737373; /* Body text, secondary text, buttons, dividers @presenter Color */
+  --second-gray: #ccc; /* Content on photo, graphics @presenter Color */
+  --light-gray: #f2f2f2; /* Content on photo, graphics @presenter Color */
+
+  /**
+  * @tokens-end
+  */
+
+  /**
+  * @tokens Typography
+  */
+
+  --font-secondary: roobert, sans-serif; /* @presenter FontFamily */
+  --font-primary: graphiklc, sans-serif; /* @presenter FontFamily */
+  --font-size-12: 12px; /* @presenter FontSize */
+  --font-size-14: 14px; /* @presenter FontSize */
+  --font-size-16: 16px; /* @presenter FontSize */
+  --font-size-18: 18px; /* @presenter FontSize */
+  --font-size-24: 24px; /* @presenter FontSize */
+  --font-size-28: 28px; /* @presenter FontSize */
+  --font-size-36: 36px; /* @presenter FontSize */
+  --font-size-48: 48px; /* @presenter FontSize */
+  --font-size-56: 56px; /* @presenter FontSize */
+  --font-size-64: 64px; /* @presenter FontSize */
+  --font-size-72: 72px; /* @presenter FontSize */
+  --line-height-14: 14.4px; /* @presenter LineHeight */
+  --line-height-16: 16.8px; /* @presenter LineHeight */
+  --line-height-18: 18px; /* @presenter LineHeight */
+  --line-height-19: 19.2px; /* @presenter LineHeight */
+  --line-height-20: 20px; /* @presenter LineHeight */
+  --line-height-22: 21.6px; /* @presenter LineHeight */
+  --line-height-24: 24px; /* @presenter LineHeight */
+  --line-height-28: 28px; /* @presenter LineHeight */
+  --line-height-36: 36px; /* @presenter LineHeight */
+  --line-height-48: 48px; /* @presenter LineHeight  */
+  --line-height-56: 56px; /* @presenter LineHeight */
+  --line-height-64: 64px; /* @presenter LineHeight */
+  --line-height-72: 72px; /* @presenter LineHeight */
+  --font-weight-400: 400; /* @presenter FontWeight */
+  --font-weight-500: 500; /* @presenter FontWeight */
+  --font-weight-700: 700; /* @presenter FontWeight */
+  --leter-spacing-negative-1: -1px; /* @presenter LetterSpacing */
+
+  /**
+  * @tokens-end
+  */
+
+  --header-height: 80px;
+}
+
+html,
+body {
+  min-width: 375px;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+
+  color: var(--black);
+  font-weight: 400;
+  font-size: 16px;
+  font-family: var(--font-primary);
+  line-height: 20px;
+  word-wrap: break-word;
+
+  background-color: var(--white);
+
+  scroll-behavior: smooth !important; // I have no idea, but its works for Next Link
+  scroll-padding-top: 80px;
+}
+
+button,
+a {
+  font-family: var(--font-primary);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.h1 {
+  font-weight: var(--font-weight-700);
+  font-size: var(--font-size-48);
+  font-family: var(--font-secondary);
+  line-height: var(--line-height-48);
+
+  @include from($media-lg) {
+    font-size: var(--font-size-72);
+    line-height: var(--line-height-72);
+  }
+}
+
+.h2 {
+  font-weight: var(--font-weight-500);
+  font-size: var(--font-size-36);
+  font-family: var(--font-secondary);
+  line-height: var(--line-height-36);
+  letter-spacing: var(--leter-spacing-negative-1);
+
+  @include from($media-lg) {
+    font-size: var(--font-size-48);
+    line-height: var(--line-height-48);
+  }
+}
+
+.h3 {
+  font-weight: var(--font-weight-500);
+  font-size: var(--font-size-24);
+  font-family: var(--font-primary);
+  line-height: var(--line-height-24);
+}
+
+.body-text {
+  font-weight: var(--font-weight-400);
+  font-size: var(--font-size-18);
+  font-family: var(--font-primary);
+  line-height: var(--line-height-22);
+}
+
+.caps-text {
+  font-weight: var(--font-weight-500);
+  font-size: var(--font-size-18);
+  font-family: var(--font-primary);
+  line-height: var(--line-height-22);
+}
+
+.second-text {
+  font-weight: var(--font-weight-400);
+  font-size: var(--font-size-14);
+  font-family: var(--font-primary);
+  line-height: var(--line-height-16);
+}
+
+.gradient-text {
+  color: transparent;
+
+  background: linear-gradient(268.73deg, #83b3ff 35.14%, #3272d9 104.08%);
+  background-clip: text;
+}
+
+.animation {
+  opacity: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+
+  white-space: nowrap;
+
+  clip-path: inset(50%);
+}

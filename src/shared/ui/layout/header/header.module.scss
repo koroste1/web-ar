@@ -1,0 +1,12 @@
+.header {
+  display: flex;
+  padding: var(--padding-16) var(--padding-32);
+  align-items: center;
+  justify-content: space-between;
+  min-height: var(--header-height);
+}
+
+.navList{
+  display: flex;
+  gap: 16px;
+}

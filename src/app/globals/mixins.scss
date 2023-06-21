@@ -1,0 +1,13 @@
+@mixin from($w) {
+  @media screen and (min-width: #{$w}px) {
+    @content;
+  }
+}
+
+$media-sm: 375;
+$media-md: 768;
+$media-lg: 1280;
+$media-lg-1440: 1440;
+$media-lg-1980: 1980;
+$media-xl: 2400;
+
