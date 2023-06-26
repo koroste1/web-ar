@@ -34,6 +34,7 @@ export function Model({ src }: Props) {
 
   useHitTest((hitMatrix, hit) => {
     if (hitPoint.current) {
+      // @ts-ignore
       hitMatrix.decompose(hitPoint.current.position, hitPoint.current.rotation, hitPoint.current.scale);
     }
   });

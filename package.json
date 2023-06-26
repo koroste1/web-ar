@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "type": "./node_modules/.bin/tsc --project tsconfig.json --noEmit"
   },
   "dependencies": {
     "@ar-js-org/ar.js": "^3.4.5",
